@@ -339,20 +339,7 @@ function DoDecodeGWT(oSessions: Fiddler.Session[]){
                     requestBodyToBeEdited = tmpRequestBody;     
                 }
             }
-                                                                                
-                     
-            //Writes parsed output to log files.
-            /*
-            pyScript.Append("gwtparse.py -i ");
-            pyScript.Append('"');
-            pyScript.Append(requestBodyToBeEdited);
-            pyScript.Append('"');
-            pyScript.Append(" -p ");
-            pyScript.Append("-w ");
-            pyScript.Append(" C:\\Users\\JayashaS\\Fiddler2\\fcmui\\gwtlog_");
-            pyScript.Append(oSessions[x].id);
-            pyScript.Append(".log");
-            */  
+                                                                            
                                                                 
                                                                                                                                 
                                                                                                                                 
@@ -585,62 +572,6 @@ static function OnBeforeRequest(oSession: Session) {
             {
                 oSession["ui-color"] = "orange";
             }
-                                                
-                                                
-                                                
-                                                
-            /*
-            var pyScript0: System.Text.StringBuilder = new System.Text.StringBuilder();
-            pyScript0.Append(gwtparse.py -i );
-            pyScript0.Append('"');
-            pyScript0.Append(requestBody);
-            pyScript0.Append('"');
-            pyScript0.Append(" -");
-            System.Diagnositcs.Process.Start("python", pyScript0);
-            */
-                           
-
-            /* //Enable to use the logging into file. 
-            var sb: System.Text.StringBuilder = new System.Text.StringBuilder();
-            sb.Append(oSession.url);
-            sb.Append('\t');
-            sb.Append(requestBody);
-            sb.Append('\r\n');
-                     
-            var pyScript: System.Text.StringBuilder = new System.Text.StringBuilder();
-            pyScript.Append("gwtparse.py -i ");
-            pyScript.Append('"');
-            pyScript.Append(requestBody);
-            pyScript.Append('"');
-            pyScript.Append(" -p ");
-            pyScript.Append("-w ");
-            pyScript.Append(" C:\\Users\\JayashaS\\Fiddler2\\fcmui\\gwtlog_");
-            pyScript.Append(oSession.id);
-            pyScript.Append(".log");
-                           
-            FiddlerObject.log(pyScript)
-                           
-            System.Diagnostics.Process.Start("python", pyScript);
-                           
-                           
-                           
-                           
-            Utilities.RunExecutable("python", pyScript);
-                           
-            var sw : System.IO.StreamWriter  = System.IO.File.AppendText("gwt-requests.log");
-            sw.Write(sb);
-            sw.Flush();   
-            sw.Close();
-            */
-                           
-            /*var sc: System.Text.StringBuilder = new System.Text.StringBuilder();
-            var fileMode : System.IO.FileMode.OpenOrCreate;
-            sc.Append('C:\\Users\\JayashaS\\gwt-requests.log');
-            var sw : System.IO.StreamWriter = System.IO.File.Open(sc,fileMode);
-            sw.Write(sb);
-            sw.Close();
-            sw.Dispose();
-            */
         } catch (excpt: System.Exception) {
         MessageBox.Show(excpt.ToString());
     }      
