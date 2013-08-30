@@ -1,4 +1,4 @@
-FiddlerExtension
+FiddlerExtension-scripts
 ================
 
 Fiddler Extension for 
